@@ -15,7 +15,16 @@
       "Bash(npx prisma init)",
       "Bash(git init)",
       "Bash(git add .)",
-      "Bash(git commit -m \"$(cat <<''EOF''\nInitial commit: Next.js SaaS Starter\n\n- Next.js 15 with App Router and TypeScript\n- Auth.js v5 with Email/Password and Google OAuth\n- Prisma ORM with Neon PostgreSQL\n- Stripe integration (one-time + subscriptions)\n- shadcn/ui components with Tailwind CSS\n- Protected routes with middleware\n- Role-based access control\n- Customer Portal integration\n- Comprehensive README with setup instructions\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"
+      "Bash(git commit -m \"$(cat <<''EOF''\nInitial commit: Next.js SaaS Starter\n\n- Next.js 15 with App Router and TypeScript\n- Auth.js v5 with Email/Password and Google OAuth\n- Prisma ORM with Neon PostgreSQL\n- Stripe integration (one-time + subscriptions)\n- shadcn/ui components with Tailwind CSS\n- Protected routes with middleware\n- Role-based access control\n- Customer Portal integration\n- Comprehensive README with setup instructions\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git branch -m main)",
+      "Bash(gh repo create testnextauth --public --source=. --remote=origin --push --description=\"Production-ready Next.js SaaS starter with NextAuth.js v5, Stripe, and Neon PostgreSQL\")",
+      "Bash(vercel --prod --yes)",
+      "Bash(npm uninstall tailwindcss)",
+      "Bash(npm install -D tailwindcss@^3.4.0)",
+      "Bash(git add package.json package-lock.json)",
+      "Bash(git commit -m \"Fix: Downgrade to Tailwind CSS v3 for Vercel compatibility\")",
+      "Bash(git push)",
+      "Bash(git commit -m \"Fix: TypeScript types for Stripe subscription webhook\")"
     ],
     "deny": [],
     "ask": []
