@@ -25,7 +25,10 @@
       "Bash(git commit -m \"Fix: Downgrade to Tailwind CSS v3 for Vercel compatibility\")",
       "Bash(git push)",
       "Bash(git commit -m \"Fix: TypeScript types for Stripe subscription webhook\")",
-      "Bash(git commit -m \"Fix: Adapter type compatibility for NextAuth\")"
+      "Bash(git commit -m \"Fix: Adapter type compatibility for NextAuth\")",
+      "Bash(vercel logs testnextauth --yes)",
+      "Bash(vercel inspect testnextauth-pojycfo5n-komarovds-projects.vercel.app --logs)",
+      "Bash(git commit -m \"Fix: Use correct Stripe API version\")"
     ],
     "deny": [],
     "ask": []
