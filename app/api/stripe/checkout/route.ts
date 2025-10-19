@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
-import { createCheckoutSession } from "@/lib/stripe";
+import Stripe from "stripe";
+
+export const dynamic = "force-dynamic";
+export const runtime = "nodejs";
 
 export async function POST(req: NextRequest) {
   try {
@@ -20,11 +23,32 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const checkoutSession = await createCheckoutSession({
-      priceId,
-      userId: session.user.id,
-      userEmail: session.user.email,
+    const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "", {
+      apiVersion: "2025-09-30.clover",
+    });
+
+    const checkoutSession = await stripe.checkout.sessions.create({
       mode: mode || "payment",
+      payment_method_types: ["card"],
+      line_items: [
+        {
+          price: priceId,
+          quantity: 1,
+        },
+      ],
+      success_url: `${process.env.NEXTAUTH_URL}/dashboard?success=true`,
+      cancel_url: `${process.env.NEXTAUTH_URL}/pricing?canceled=true`,
+      customer_email: session.user.email,
+      metadata: {
+        userId: session.user.id,
+      },
+      ...(mode === "subscription" && {
+        subscription_data: {
+          metadata: {
+            userId: session.user.id,
+          },
+        },
+      }),
     });
 
     return NextResponse.json({ url: checkoutSession.url });

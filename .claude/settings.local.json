@@ -31,7 +31,8 @@
       "Bash(git commit -m \"Fix: Use correct Stripe API version\")",
       "Bash(npm run build)",
       "Bash(npm run db:generate)",
-      "Bash(git commit -m \"Add: Vercel build configuration for Prisma\")"
+      "Bash(git commit -m \"Add: Vercel build configuration for Prisma\")",
+      "Bash(git commit -m \"Fix: Build errors - initialize Stripe in API routes instead of module level\")"
     ],
     "deny": [],
     "ask": []
