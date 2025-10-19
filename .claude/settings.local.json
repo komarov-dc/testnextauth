@@ -24,7 +24,8 @@
       "Bash(git add package.json package-lock.json)",
       "Bash(git commit -m \"Fix: Downgrade to Tailwind CSS v3 for Vercel compatibility\")",
       "Bash(git push)",
-      "Bash(git commit -m \"Fix: TypeScript types for Stripe subscription webhook\")"
+      "Bash(git commit -m \"Fix: TypeScript types for Stripe subscription webhook\")",
+      "Bash(git commit -m \"Fix: Adapter type compatibility for NextAuth\")"
     ],
     "deny": [],
     "ask": []
