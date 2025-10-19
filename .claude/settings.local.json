@@ -28,7 +28,10 @@
       "Bash(git commit -m \"Fix: Adapter type compatibility for NextAuth\")",
       "Bash(vercel logs testnextauth --yes)",
       "Bash(vercel inspect testnextauth-pojycfo5n-komarovds-projects.vercel.app --logs)",
-      "Bash(git commit -m \"Fix: Use correct Stripe API version\")"
+      "Bash(git commit -m \"Fix: Use correct Stripe API version\")",
+      "Bash(npm run build)",
+      "Bash(npm run db:generate)",
+      "Bash(git commit -m \"Add: Vercel build configuration for Prisma\")"
     ],
     "deny": [],
     "ask": []
