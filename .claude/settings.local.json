@@ -33,7 +33,9 @@
       "Bash(npm run db:generate)",
       "Bash(git commit -m \"Add: Vercel build configuration for Prisma\")",
       "Bash(git commit -m \"Fix: Build errors - initialize Stripe in API routes instead of module level\")",
-      "Bash(git commit -m \"Add .vercelignore file\")"
+      "Bash(git commit -m \"Add .vercelignore file\")",
+      "Bash(git add -A)",
+      "Bash(git commit -m \"Remove middleware to fix Vercel edge function size limit\")"
     ],
     "deny": [],
     "ask": []
