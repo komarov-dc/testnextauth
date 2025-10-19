@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:www.starter.app)",
+      "WebFetch(domain:github.com)",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --app --import-alias \"@/*\" --no-src-dir --eslint)",
+      "Bash(npm init -y)",
+      "Bash(npm install next@latest react@latest react-dom@latest)",
+      "Bash(npm install -D typescript @types/node @types/react @types/react-dom tailwindcss postcss autoprefixer eslint eslint-config-next)",
+      "Bash(npm install next-auth@beta @prisma/client @auth/prisma-adapter stripe bcryptjs)",
+      "Bash(npm install -D prisma @types/bcryptjs)",
+      "Bash(npx tailwindcss init -p)",
+      "Bash(npm install class-variance-authority clsx tailwind-merge lucide-react)",
+      "Bash(npx prisma init)",
+      "Bash(git init)",
+      "Bash(git add .)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nInitial commit: Next.js SaaS Starter\n\n- Next.js 15 with App Router and TypeScript\n- Auth.js v5 with Email/Password and Google OAuth\n- Prisma ORM with Neon PostgreSQL\n- Stripe integration (one-time + subscriptions)\n- shadcn/ui components with Tailwind CSS\n- Protected routes with middleware\n- Role-based access control\n- Customer Portal integration\n- Comprehensive README with setup instructions\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
